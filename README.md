@@ -4,6 +4,10 @@
 - adb安装应用
 - 就没啦~
 ## 下载
-https://github.com/luodyfdg/adbtools/releases
-##
+[Releases](https://github.com/luodyfdg/adbtools/releases)
+[123云盘](https://www.123pan.com/s/XBLRVv-2LwHv)
+提取码：SUbl
+
+---
+
 本人很佛系，下次更新又不知道是猴年马月了
