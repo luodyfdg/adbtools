@@ -7,7 +7,7 @@
 - 即将支持半自动刷入magisk（内测阶段）
 ## 下载
 [Releases](https://github.com/luodyfdg/adbtools/releases "https://github.com/luodyfdg/adbtools/releases")<br>
-[123云盘](https://www.123pan.com/s/XBLRVv-2LwHv "https://www.123pan.com/s/XBLRVv-2LwHv") (提取码：SUbl)
+[123云盘](https://www.123pan.com/s/XBLRVv-J5wHv "https://www.123pan.com/s/XBLRVv-J5wHv") (提取码：01LH)
 
 ---
 
