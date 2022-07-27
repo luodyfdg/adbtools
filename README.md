@@ -6,8 +6,10 @@
 - A\B分区可使用临时启动（未测试）
 - 即将支持半自动刷入magisk（内测阶段）
 ## 下载
+各版本下载地址如下: <br>
+<br>
 [Releases](https://github.com/luodyfdg/adbtools/releases "https://github.com/luodyfdg/adbtools/releases")<br>
-[123云盘](https://www.123pan.com/s/XBLRVv-J5wHv "https://www.123pan.com/s/XBLRVv-J5wHv") (提取码：01LH)
+[123云盘](https://www.123pan.com/s/XBLRVv-J5wHv "https://www.123pan.com/s/XBLRVv-J5wHv") (已高速)(提取码：01LH)
 
 ---
 
