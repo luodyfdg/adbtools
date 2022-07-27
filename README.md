@@ -17,3 +17,9 @@
 
 ## 注意事项
 - 如果链接手机后没有检测到设备，请检查开发者选项中的“USB调试”是否打开，并安装安卓驱动
+
+## 关于反馈
+- [反馈链接](https://support.qq.com/products/410627 "https://support.qq.com/products/410627")<br>
+
+- 也可以在
+[Issues](https://github.com/luodyfdg/adbtools/issues "https://github.com/luodyfdg/adbtools/issues") 中反馈
