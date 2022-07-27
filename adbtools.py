@@ -5,7 +5,7 @@ while a <= 1:
     print("测试版可能有bug，请在support.qq.com/products/410627中反馈\n")
     print("""【0】退出【1】查看设备连接情况【2】重启至rec
 【3】重启至fastboot【4】查看fastboot连接情况【5】刷入rec分区【6】刷入boot分区
-【7】安装应用""")
+【7】安装应用【8】临时启动(A/B分区设备)【?】半自动root(未开放使用)""")
     print()
     skna = input("请输入数字：")
     if(skna == '0'): #输入0则退出
@@ -63,5 +63,15 @@ while a <= 1:
         print("如果手机提示是否安装，请确认")
         system(apkS)
         print("已安装，请确认")
+        system("pause")
+    if(skna == '8'):#临时启动(A/B分区设备)
+        system("cls")
+        print("请在fastboot模式下继续")
+        print()
+        system("pause")
+        system("cls")
+        imgN = input("请将镜像放置于主目录，再输入文件名")
+        fullimg = f"fastboot boot {imgN}"
+        system(fullimg)
         system("pause")
     system("cls")
