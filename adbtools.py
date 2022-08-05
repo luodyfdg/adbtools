@@ -1,36 +1,40 @@
 from os import system
 
+system("adb start-server") # 启动adb
+system("cls")
+
 a = 1
 while a <= 1:
     print("测试版可能有bug，请在support.qq.com/products/410627中反馈\n")
-    print("""【0】退出【1】查看设备连接情况【2】重启至rec
+    print("""【0】清理进程并退出【1】查看设备连接情况【2】重启至rec
 【3】重启至fastboot【4】查看fastboot连接情况【5】刷入rec分区【6】刷入boot分区
-【7】安装应用【8】临时启动(A/B分区设备)【?】半自动root(未开放使用)""")
-    print()
-    skna = input("请输入数字：")
-    if(skna == '0'): #输入0则退出
+【7】安装应用【8】临时启动(A/B分区设备)【9】停用应用(免root)【10】启用被停用的应用
+【?】半自动root(未开放使用)\n""")
+    skna = int(input("请输入数字："))
+    if(skna == 0): # 输入0则退出
+        system("adb kill-server") #清除进程
         exit() 
-    if(skna == '1'):#查看设备连接情况
+    if(skna == 1):# 查看设备连接情况
         system("cls")
         system("adb devices")
         system("pause")
-    if(skna == '2'):#重启至rec
+    if(skna == 2):# 重启至rec
         system("cls")
         print("重启中...")
         system("adb reboot recovery")
         print("已重启，请确认")
         system("pause")
-    if(skna == '3'):#重启至fastboot
+    if(skna == 3):# 重启至fastboot
         system("cls")
         print("重启中...")
         system("adb reboot fastboot")
         print("已重启，请确认")
         system("pause")
-    if(skna == '4'):#查看fastboot连接情况
+    if(skna == 4):# 查看fastboot连接情况
         system("cls")
         system("fastboot devices")
         system("pause")
-    if(skna == '5'):#刷入rec分区
+    if(skna == 5):# 刷入rec分区
         system("cls")
         print("刷入rec分区有风险，请三思而后行\n")
         system("pause")
@@ -41,7 +45,7 @@ while a <= 1:
         astadb = f"fastboot flash recovery {reciN}"
         system(astadb)
         system("pause")
-    if(skna == '6'):#刷入boot分区
+    if(skna == 6):# 刷入boot分区
         system("cls")
         print("刷入boot分区有风险，请确认")
         system("pause")
@@ -53,7 +57,7 @@ while a <= 1:
         system(booadb)
         print("已刷入，请确认")
         system("pause")
-    if(skna == '7'):#安装应用
+    if(skna == 7):# 安装应用
         system("cls")
         print("请在开发者选项中打开“USB安装应用”再继续！\n")
         system("pause")
@@ -64,7 +68,7 @@ while a <= 1:
         system(apkS)
         print("已安装，请确认")
         system("pause")
-    if(skna == '8'):#临时启动(A/B分区设备)
+    if(skna == 8):# 临时启动(A/B分区设备)  （未经测试）
         system("cls")
         print("请在fastboot模式下继续")
         print()
@@ -73,5 +77,21 @@ while a <= 1:
         imgN = input("请将镜像放置于主目录，再输入文件名")
         fullimg = f"fastboot boot {imgN}"
         system(fullimg)
+        system("pause")
+    if(skna == 9):# 停用应用（免root）
+        system("cls")
+        appPack = input("请输入应用的包名: ")
+        fullPack = f"adb shell pm disable-user {appPack}"
+        print("停用中......")
+        system(fullPack)
+        print("停用完成，请确认是否已停用")
+        system("pause")
+    if(skna == 10): #启用被停用的应用
+        system("cls")
+        appPack = input("请输入应用的包名: ")
+        fullPack = f"adb shell pm enable {appPack}"
+        print("启用中......")
+        system(fullPack)
+        print("启用完成，请确认")
         system("pause")
     system("cls")
