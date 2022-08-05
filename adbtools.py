@@ -8,8 +8,7 @@ while a <= 1:
     print("测试版可能有bug，请在support.qq.com/products/410627中反馈\n")
     print("""【0】清理进程并退出【1】查看设备连接情况【2】重启至rec
 【3】重启至fastboot【4】查看fastboot连接情况【5】刷入rec分区【6】刷入boot分区
-【7】安装应用【8】临时启动(A/B分区设备)【9】停用应用(免root)【10】启用被停用的应用
-【?】半自动root(未开放使用)\n""")
+【7】安装应用【8】临时启动(A/B分区设备)【9】停用应用(免root)【10】启用被停用的应用\n""")
     skna = int(input("请输入数字："))
     if(skna == 0): # 输入0则退出
         system("adb kill-server") #清除进程
