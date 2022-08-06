@@ -5,10 +5,12 @@ system("cls")
 
 a = 1
 while a <= 1:
-    print("测试版可能有bug，请在support.qq.com/products/410627中反馈\n")
+    print("测试版可能有bug，请在support.qq.com/products/410627中反馈")
+    print()
     print("""【0】清理进程并退出【1】查看设备连接情况【2】重启至rec
 【3】重启至fastboot【4】查看fastboot连接情况【5】刷入rec分区【6】刷入boot分区
-【7】安装应用【8】临时启动(A/B分区设备)【9】停用应用(免root)【10】启用被停用的应用\n""")
+【7】安装应用【8】临时启动(A/B分区设备)【9】停用应用(免root)【10】启用被停用的应用
+【11】查看所有包名【12】查看第三方软件包名\n""")
     skna = int(input("请输入数字："))
     if(skna == 0): # 输入0则退出
         system("adb kill-server") #清除进程
@@ -92,5 +94,13 @@ while a <= 1:
         print("启用中......")
         system(fullPack)
         print("启用完成，请确认")
+        system("pause")
+    if(skna == 11):#查看包名
+        system("cls")
+        system("adb shell pm list packages")
+        system("pause")
+    if(skna == 12):#查看第三方包名
+        system("cls")
+        system("adb shell pm list packages -3")
         system("pause")
     system("cls")
